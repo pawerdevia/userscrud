@@ -1,0 +1,125 @@
+.card-user{
+    width: 25vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border: 2px solid #E8E8E8;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-user:hover{
+    box-shadow: 0px 0px 5px #a45eeaab;
+}
+
+.container-tittle{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.card__title{
+    font-weight: 900;
+}
+
+.container-dates{
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #E8E8E8;
+    flex-direction: column;
+}
+
+.dates__list{
+    font-size: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.dates__date{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.type-date{
+    color: #E8E8E8;
+}
+
+
+.card__buttons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.buttons{
+    width: 20%;
+    height: 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;
+}
+
+.buton-trash{
+    background-color: #fc5c65;
+    color: #fff;
+
+}
+
+.buton-trash:hover{
+    background-color: #eb3b5a;
+}
+
+.buton-edit{
+    background-color: #F6F6F6;
+    color: #CFCFCF;
+}
+
+.buton-edit:hover{
+    background-color: #E6E6E6;
+}
+
+@media (max-width: 1100px){
+    .card-user{
+        width: 25vw;
+    }
+    .buttons{
+        width: 40vw;
+    }
+
+    .dates__list{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px){
+    .card-user{
+        width: 40vw;
+    }
+    .buttons{
+        width: 40vw;
+    }
+
+    .dates__list{
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 425px){
+    .card-user{
+        width: 80vw;
+    }
+
+    .buttons{
+        width: 40vw;
+    }
+}
+
+
