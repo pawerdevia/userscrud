@@ -59,7 +59,7 @@ function App() {
           <div className="accept__container">
             <h2 className='accept__tittle'>User delete</h2>
             <p className='accept__text'>User <span className='accept__name'>{nameDelete}</span>  has been delete </p>
-            <button className='accept__btn' onClick={handleModalDelete}>Aceptar</button>
+            <button className='accept__btn' onClick={handleModalDelete}>Confirm</button>
           </div>
         </div>
         {
