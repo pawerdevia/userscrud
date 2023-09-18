@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useForm } from 'react-hook-form'
 import './App.css'
 import FormUser from './components/FormUser'
 import UserCard from './components/UserCard'
@@ -10,6 +11,7 @@ function App() {
   const [estilo, setEstilo] = useState('oculto')
   const [estilo2, setEstilo2] = useState('oculto2')
   const [nameDelete, setNameDelete] = useState('unknown')
+  const { register, handleSubmit, reset } = useForm()
 
 
   const baseUrl = 'https://users-crud.academlo.tech'
@@ -23,6 +25,21 @@ function App() {
   const handleModalForm = (e) => {
     e.preventDefault()
     setInfoUpdate()
+    reset({
+      email: '',
+      password: '',
+      first_name: '',
+      last_name: '',
+      birthday: ''
+    })
+    if (estilo === 'mostrar') {
+      setEstilo('oculto')
+    } else {
+      setEstilo('mostrar')
+    }
+  }
+
+  const handleModalForm2 = () => {
     if (estilo === 'mostrar') {
       setEstilo('oculto')
     } else {
@@ -37,6 +54,7 @@ function App() {
       setEstilo2('mostrar2')
     }
   }
+
   return (
     <div className='principal'>
       <header className="header">
@@ -52,7 +70,11 @@ function App() {
         updateUser={updateUser}
         setInfoUpdate={setInfoUpdate}
         estilo={estilo}
-        setEstilo={setEstilo}
+        handleModalForm2={handleModalForm2}
+        handleModalForm={handleModalForm}
+        register={register}
+        handleSubmit={handleSubmit}
+        reset={reset}
       />
       <div className='container-users'>
         <div className={`${estilo2} modal-accept`}>
@@ -69,10 +91,9 @@ function App() {
               user={user}
               deleteUser={deleteUser}
               setInfoUpdate={setInfoUpdate}
-              estilo={estilo}
-              setEstilo={setEstilo}
               setNameDelete={setNameDelete}
               handleModalDelete={handleModalDelete}
+              handleModalForm2={handleModalForm2}
             />
           ))
         }

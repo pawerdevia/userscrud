@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/styles/UserCard.css'
 
-const UserCard = ({ user, deleteUser, setInfoUpdate, estilo, setEstilo, setNameDelete, handleModalDelete }) => {
+const UserCard = ({ user, deleteUser, setInfoUpdate, setNameDelete, handleModalDelete, handleModalForm2 }) => {
 
     const handleDelete = () => {
         deleteUser('/users', user.id)
@@ -11,16 +11,10 @@ const UserCard = ({ user, deleteUser, setInfoUpdate, estilo, setEstilo, setNameD
 
     const handleEdit = () => {
         setInfoUpdate(user)
-        handleModalForm()
+        handleModalForm2()
     }
 
-    const handleModalForm = () => {
-        if (estilo === 'mostrar') {
-            setEstilo('oculto')
-        } else {
-            setEstilo('mostrar')
-        }
-    }
+
 
     return (
         <article className='card-user'>

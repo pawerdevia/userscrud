@@ -1,34 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
 import '../assets/styles/FormUser.css'
 
-const FormUser = ({ createUser, infoUpdate, updateUser, setInfoUpdate, estilo, setEstilo}) => {
-
-    const { register, handleSubmit, reset } = useForm()
-
-    const handleModalForm2 = () => {
-        if (estilo === 'mostrar') {
-            setEstilo('oculto')
-        } else {
-            setEstilo('mostrar')
-        }
-    }
-
-    const handleModalForm = (e) => {
-        e.preventDefault()
-        reset({
-            email: '',
-            password: '',
-            first_name: '',
-            last_name: '',
-            birthday: ''
-        })
-        if (estilo === 'mostrar') {
-            setEstilo('oculto')
-        } else {
-            setEstilo('mostrar')
-        }
-    }
+const FormUser = ({ createUser,infoUpdate,updateUser,setInfoUpdate,estilo,handleModalForm,handleModalForm2,register,handleSubmit,reset}) => {
 
     useEffect(() => {
         reset(infoUpdate)
