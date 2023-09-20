@@ -34,9 +34,9 @@ const FormUser = ({ createUser,infoUpdate,updateUser,setInfoUpdate,estilo,handle
             <form onSubmit={handleSubmit(submit)} className='form'>
                 <div className="form-header">
                     <h2 className='form__tittle'>{infoUpdate ? 'Edit user' : 'New user'}</h2>
-                    <button className='btn-close' onClick={handleModalForm}>
+                    <span className='btn-close' onClick={handleModalForm}>
                         <i className='bx bx-x'></i>
-                    </button>
+                    </span>
                 </div>
                 <div className='form__date'>
                     <label htmlFor="email">Email</label>

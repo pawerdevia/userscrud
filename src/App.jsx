@@ -22,8 +22,7 @@ function App() {
   }, [])
 
 
-  const handleModalForm = (e) => {
-    e.preventDefault()
+  const handleModalForm = () => {
     setInfoUpdate()
     reset({
       email: '',
