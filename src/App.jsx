@@ -14,7 +14,7 @@ function App() {
   const { register, handleSubmit, reset } = useForm()
 
 
-  const baseUrl = 'https://users-crud.academlo.tech'
+  const baseUrl = 'https://users-backend-dev-fsqs.3.us-1.fl0.io'
   const [users, getUsers, createUser, deleteUser, updateUser] = useFetch(baseUrl)
 
   useEffect(() => {
