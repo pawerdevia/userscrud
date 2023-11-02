@@ -56,7 +56,7 @@ const FormUser = ({ createUser,infoUpdate,updateUser,setInfoUpdate,estilo,handle
                 </div>
                 <div className='form__date'>
                     <label htmlFor="birthday">Birthday</label>
-                    <input className='input-form' {...register('birthday')} type="date" id="birthday" />
+                    <input className='input-form' {...register('birthday')} type="number" id="birthday" />
                 </div>
                 <button className='form__button'>{infoUpdate ? 'Guardar Cambios' : 'Agregar nuevo usuario'}</button>
             </form>
